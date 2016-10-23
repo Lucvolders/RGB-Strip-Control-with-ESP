@@ -1,0 +1,28 @@
+wprint |<h1 style="text-align:center;">Luc Volders</br>RGB-STRIP</br>CONTROL|
+wprint "<br/><br/>"
+
+slider r, 0, 255
+
+cssid htmlid(),"background-color: red"
+textbox r
+wprint "<br/><br/>"
+
+slider g, 0, 255
+cssid htmlid(),"background-color: green"
+textbox g
+wprint "<br/><br/>"
+
+slider b, 0, 255
+cssid htmlid(),"background-color: blue"
+textbox b
+wprint "<br/><br/>"
+
+neo.stripcolor(0,6,r,g,b)
+
+button "<h2>Set</h2>", [set]
+wprint "<br/></h1>"
+wait
+
+[set]
+neo.stripcolor(0,6,r,g,b)
+wait
